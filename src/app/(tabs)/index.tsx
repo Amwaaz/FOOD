@@ -1,13 +1,18 @@
-import { StyleSheet } from 'react-native';
-import EditScreenInfo from '@/src/components/EditScreenInfo';
-import {Text, View} from '@/src/components/Themed';
+import { StyleSheet, Text, View, Image, Dimensions } from 'react-native';
 
-export default function TabOneScreen() {
+import products from '@/assets/data/products';
+import ProductListItem from '@/src/components/ProductListItem';
+
+// Get screen height using Dimensions API
+
+
+// Child component: the list item
+// Parent screen: the menu screen
+export default function MenuScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>hello</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
+    <View>
+      <ProductListItem product={products[0]} />
+      <ProductListItem product={products[1]} />
     </View>
   );
 }
@@ -18,13 +23,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
+ 
 });
+
+
+// card: {
+//   backgroundColor: 'white', 
+//   borderRadius: 15,         
+//   padding: 20,              
+//   shadowColor: '#000',      
+//   shadowOffset: {
+//     width: 0,
+//     height: 2,
+//   },
+//   shadowOpacity: 0.25,      
+//   shadowRadius: 3.5,        
+//   elevation: 5,                 
+//   width: '50%',             
+// },
