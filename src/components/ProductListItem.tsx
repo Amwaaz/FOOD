@@ -1,12 +1,13 @@
 import { StyleSheet, Text, View, Image, Dimensions } from 'react-native';
 import Colors from '@/src/constants/Colors';
-import products from '@/assets/data/products';
+//import products from '@/assets/data/products';
+import { Product } from '../types';
+
 
 // Get screen height using Dimensions API
 const { height } = Dimensions.get('window');
 
-
-const ProductListItem = ({ product }) => {
+const ProductListItem = ({ product }: { product: Product }) => {
     return (
         <View style={styles.container}>
             <View style={styles.itemBox}>
@@ -23,6 +24,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        maxWidth:'50%'
     },
     itemBox: {
         width: "80%",
@@ -64,4 +66,14 @@ const styles = StyleSheet.create({
 });
 
 export default ProductListItem;
+
+
+// In JavaScript/TypeScript, when you write { product: Product }, it is interpreted as "destructure the product prop and rename it to Product." This is not what you want.
+
+// type ProductListItemProps={
+//   product:Product and then in component {product}:ProductItemListprops
+
+// }
+
+//for the source ka error give it a default uri so that agr given uri null nikl aye it still has a string one :"https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/default.png" by making it equal to export const defaultPizzaImage
 
