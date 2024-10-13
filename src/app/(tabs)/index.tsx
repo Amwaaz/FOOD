@@ -1,40 +1,14 @@
-import { StyleSheet, FlatList } from "react-native";
-import products from "@/assets/data/products";
-import ProductListItem from "@/src/components/ProductListItem";
+//this is the default file
+//index ye main file hai jb main aayi gi tb hm menu main redirect hojaien ge
 
-// Child component: the list item
-// Parent screen: the menu screen
+//If your tabs folder contains a _layout.tsx file, this file likely sets up the tab navigation structure. It may automatically treat any index.tsx file as a new tab and display it at the bottom of the screen.
 
-//Flatlist main data is what should be rendered and renderitem is the function k kese un cheezon ko render krna hai. The function receives an object as its parameter, and that object has a property called item.
+//When users open the main tabs route (e.g., they click on the tab or the app starts), this index.tsx file acts as the default screen.
+// Instead of showing content or UI, it immediately redirects users to the /menu/ route.
+//Keeping an index.tsx in tabs (for main tab layout) and another index.tsx in menu (for menu-related content) helps maintain a clean, modular structure.
 
-export default function MenuScreen() {
-  return (
-    <FlatList
-      data={products}
-      renderItem={({ item }) => <ProductListItem product={item} />}
-      numColumns={2}
-    />
-  );
+import { Redirect } from "expo-router"
+
+export default function TabIndex(){
+    return <Redirect href={'/menu/'}/>
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-  },
-});
-
-// card: {
-//   backgroundColor: 'white',
-//   borderRadius: 15,
-//   padding: 20,
-//   shadowColor: '#000',
-//   shadowOffset: {
-//     width: 0,
-//     height: 2,
-//   },
-//   shadowOpacity: 0.25,
-//   shadowRadius: 3.5,
-//   elevation: 5,
-//   width: '50%',
-// },
