@@ -60,9 +60,10 @@ const styles = StyleSheet.create({
         fontWeight: "600",
         marginVertical: 5,
         textAlign: 'center',
+        color:'#00004D'
     },
     price: {
-        color: Colors.light.tint,
+        color:'#00004D',
         fontWeight: "bold",
         fontSize: 18,
         textAlign: 'center',
