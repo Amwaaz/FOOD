@@ -16,7 +16,7 @@ export type CartItem = {
 };
 
 export const OrderStatusList: OrderStatus[] = [
-  'New',
+  'New', 
   'Cooking',
   'Delivering',
   'Delivered',
