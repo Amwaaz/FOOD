@@ -131,23 +131,5 @@ const styles = StyleSheet.create({
 
 export default ProductDetailScreen;
 
-//for the conditional styling, putting existing styles into array
 
-//for the styling AI centers them vertically and JC horizontally. to sizes k dabbe ko jo main wala hai jismain 4 size hain usmain JC space around taake chaaron size equal distance pe hon. aur AI taake vertically bhi center main. Aur size main yani aik aik ka usmain usmain JC center taake text center hojai aur Jc bhi
 
-//we have dynamic routes in expo router
-// we need to have a variable that corresponds to that dynamic part of the url  [id] now from ProductListItem we need to receive the id here
-
-//useLocalSearchParams returns an object containing parameteers from the route(hmara route id k sath tha) phir uss object main se hmne id extract kia
-
-//hmne iss file ko dala app main lekin(tabs) k bahir which is why hmain bottom pe tabs nzr nhi ata jb hm detail pe jate
-
-//menu tab jo hai usmain do screens aaien gi. the menu and details wali. jb hm details pe jaien ge tb tab neeche se change nhi hoga. so nested navigator. tab navigator k andr stack navigator taake menu aur details main ja sken
-
-//they shouldnt appear as separate pages on the bottom tab footer. jb sirf menu index aur id ko meny folder main move kia tb ye hua k orders  menu/index  menu/id
-
-//This is an arrow function used as the argument for find(). It runs for each element in the products array.
-
-// p: Represents the current product in the products array during each iteration. p.id.toString(): Converts the id of the current product p (which is likely a number) to a string. This is done to ensure it's compared as a string with id.'?' for if the name is null.product?.name. without the product checking "if"
-
-//when learning about managing sizes. "STATE": can keep track of data that changes and based on that the component will re render to refleact those changes on the UI
